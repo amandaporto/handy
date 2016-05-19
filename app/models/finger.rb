@@ -11,6 +11,7 @@ class Finger < ActiveRecord::Base
   validates :hand_id,         presence: true
   validates :name,            presence: true
   validates :position,        presence: true
+
   validate  :check_phalanges_count
 
   private
