@@ -17,7 +17,7 @@ class Finger < ActiveRecord::Base
   private
 
   def check_phalanges_count
-    unless is_criminal? || is_malformed?
+    unless is_malformed? || is_criminal?
       errors.add(:phalanges_count, 'is invalid') unless phalanges_count.present? && phalanges_count.between?(2,3)
     end
   end
