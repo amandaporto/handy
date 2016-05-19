@@ -42,6 +42,8 @@ end
 group :test do
   gem "shoulda-matchers", require: false
   gem "shoulda-callback-matchers"
+  gem "ffaker"
+  gem "factory_girl"
 end
 
 group :development do
