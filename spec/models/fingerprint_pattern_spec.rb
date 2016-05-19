@@ -13,14 +13,3 @@ RSpec.describe FingerprintPattern, type: :model do
   end
 
 end
-
-# VALID_PATTERNS = [
-#   'Plain Arch',
-#   'Tented Arch',
-#   'Radial Loop',
-#   'Ulnar Loop',
-#   'Plain Whorl',
-#   'Central Pocket Whorl',
-#   'Double Loop Whorl',
-#   'Accidental Whorl'
-# ]

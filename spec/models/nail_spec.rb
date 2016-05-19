@@ -10,10 +10,20 @@ RSpec.describe Nail, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:finger_id) }
   end
+
+  describe '#scratch' do
+    context 'when no scratchable is passed' do
+      it 'scratches nose' do
+        expect(subject.scratch).to eq('scratching nose...')
+      end
+    end
+
+    context 'when scratchable is passed' do
+      let(:scratchable) {FFaker::Lorem.word}
+
+      it 'scratches scratchable' do
+          expect(subject.scratch(scratchable)).to eq("scratching #{scratchable}...")
+      end
+    end
+  end
 end
-
-# def scratch(scratchable = "nose")
-#   "scratching #{scratchable}..."
-# end
-
-# test that you are scartching whatever is scratchable
