@@ -39,6 +39,13 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
+group :test do
+  gem "shoulda-matchers", require: false
+  gem "shoulda-callback-matchers"
+  gem "ffaker"
+  gem "factory_girl"
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
