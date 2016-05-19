@@ -8,6 +8,9 @@
 require 'rails_helper'
 
 RSpec.describe Finger, type: :model do
+  before do
+    subject.hand = Hand.new
+  end
 
   describe 'associations' do
     it { is_expected.to have_one(:nail) }
@@ -30,8 +33,8 @@ RSpec.describe Finger, type: :model do
 
   describe 'delegations' do
     it { is_expected.to delegate_method(:pattern).to(:fingerprint).with_prefix(true) }
-    it { is_expected.to delegate_method(:is_criminal?).to(:hand).with_prefix(false) }
-    it { is_expected.to delegate_method(:scratch).to(:nail).with_prefix(false) }
+    it { is_expected.to delegate_method(:is_criminal?).to(:hand) }
+    it { is_expected.to delegate_method(:scratch).to(:nail) }
 
     # Old Syntax
     # it { should delegate_method(:pattern).to(:fingerprint).with_prefix(true) }
