@@ -1,3 +1,9 @@
+# delegate :is_criminal?, to: :hand,        prefix: false
+# delegate :scratch,      to: :nail,        prefix: false
+#
+# validates :hand_id,         presence: true
+# validates :name,            presence: true
+# validates :position,        presence: true
 
 require 'rails_helper'
 
@@ -6,7 +12,7 @@ RSpec.describe Finger, type: :model do
   describe 'associations' do
     it { is_expected.to have_one(:nail) }
     it { is_expected.to have_one(:fingerprint) }
-    it { is_expected.to belongs_to(:hand) }
+    it { is_expected.to belong_to(:hand) }
   end
 
   describe 'validations' do

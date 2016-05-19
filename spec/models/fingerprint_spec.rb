@@ -8,8 +8,8 @@ RSpec.describe Fingerprint, type: :model do
    end
 
   describe 'associations' do
-    it { is_expected.to belongs_to(:finger) }
-    it { is_expected.to belongs_to(:fingerprint_pattern) }
+    it { is_expected.to belong_to(:finger) }
+    it { is_expected.to belong_to(:fingerprint_pattern) }
   end
 
   describe 'validations' do

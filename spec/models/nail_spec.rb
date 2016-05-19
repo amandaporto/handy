@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.describe Nail, type: :model do
 
   describe 'associations' do
-    it { is_expected.to belongs_to(:finger) }
+    it { is_expected.to belong_to(:finger) }
   end
 
   describe 'validations' do
